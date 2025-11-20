@@ -1,0 +1,30 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "JeffSpark",
+    "main": "worker/index.ts",
+    "compatibility_date": "2025-11-20",
+    "assets": {
+        "not_found_handling": "single-page-application"
+    },
+    "observability": {
+        "enabled": true
+    },
+    // D1数据库绑定
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "jeffspark",
+            "database_id": "f9134e95-1203-465d-af61-fbee7b6ed54e"
+        }
+    ],
+    "vars": {
+        "AUTH_ENABLED": "true",
+        "AUTH_USERNAME": "ymirlee",
+        "AUTH_PASSWORD": "jeff1981",
+        "AUTH_SECRET": "So0cdO3L4LsHDS2Au26mWM8qdojyE8NC"
+    }
+}
